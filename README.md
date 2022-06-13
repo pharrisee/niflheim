@@ -2,7 +2,7 @@
 
 Easy setup of a Valheim server (currently Ubuntu 20.04 specific).
 
-<h3 style="color:red">Not currently for use in a production environment</span>
+<h3 style="color:red">Not currently for use in a production environment</h3>
 
 ```NAME:
    niflheim - setup a dedicated Valheim server on linux
