@@ -39,8 +39,8 @@ Currently `niflheim` will install dependencies, game server and service manageme
 ## Plan of attack
 
 1. <a href="https://github.com/pharrisee/niflheim/releases">Download a release</a>
-2. move it to a folder of your chooising, preferably on the path
-3. run it, you'll get some help text
+2. move it to a folder of your choosing, preferably on the path.
+3. run `niflheim`, you'll get some help text to peruse.
 
 ## init
 
