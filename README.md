@@ -32,7 +32,7 @@ GLOBAL OPTIONS:
 
 ## init
 
-the `niflheim init` command will initialise a `niflheim.env` file in the root of your current users folder.  Take a read of it, and edit it to suit your environment.
+The `niflheim init` command will initialise a `niflheim.env` file in the root of your current users folder.  Take a read of it, and edit it to suit your environment.
 
 ```
 VALHEIM_SERVER_FOLDER=/home/username/valheim-server
@@ -48,3 +48,64 @@ VALHEIM_SERVER_PUBLIC=1
 
 VALHEIM_SERVICE_NAME=valheim-username
 ```
+
+## depends
+
+The `niflheim depends` command will install all of the operating system dependencies to get Valheim running quickly:
+
+```
+	sudo apt-get update
+	sudo apt-get install --no-install-recommends --no-install-suggests -y software-properties-common
+	sudo dpkg --add-architecture i386
+	sudo add-apt-repository multiverse
+	echo PURGE | sudo debconf-communicate steam
+	echo PURGE | sudo debconf-communicate steamcmd
+	echo steam steam/question select "I AGREE" | sudo debconf-set-selections
+	echo steam steam/license note '' | sudo debconf-set-selections
+	echo steam steam/purge note '' | sudo debconf-set-selections
+	sudo apt-get install --no-install-recommends --no-install-suggests -y steamcmd lib32gcc-s1 lib32stdc++6 libsdl2-2.0-0:i386 libsdl2-2.0-0
+	/usr/games/steamcmd +quit &> /dev/null
+	sudo apt-get full-upgrade -y --allow-downgrades
+	sudo apt-get autoremove -y
+	sudo apt-get autoclean -y
+```
+
+## install
+
+The `niflheim install` command will install valheim and also create data and logs folders for use during execution of the server.
+
+## env
+
+The `niflheim env` command will show you the complete environment that is used by `niflheim` when running its commands.
+
+## service-install
+
+`niflheim service-install` will install a systemd unitfile into /etc/systemd/system.  The actual unitfile will be named as in the `niflheim.env` created earlier.  It will also enable the service so it will restart on system start, and allow using normal service tasks such as `sudo service valheim-username stop`.
+```
+VALHEIM_SERVICE_NAME=valheim-username
+```
+
+## service-start
+
+`niflheim service-start` will use the underlying `systemctl` and `service` commands to start the service.
+
+## service-stop
+
+`niflheim service-stop` will use the underlying `systemctl` and `service` commands to stop the service.
+
+## service-restart
+
+`niflheim service-restart` will use the underlying `systemctl` and `service` commands to restart the service.
+
+## service-status
+
+`niflheim service-status` will use the underlying `systemctl` and `service` commands to show the status of the service.
+
+
+
+
+
+
+
+
+
