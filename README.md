@@ -27,10 +27,18 @@ GLOBAL OPTIONS:
    --help, -h  show help (default: false)
 ```
 
+# What it does
+
+Currently `niflheim` will install dependencies, game server and service management of a Valheim server along with ValheimPlus and BepInEx to allow for mods to be later loaded.
+
+`niflheim` is very early software for my own consumption, it's set up to do things as I do them, but automated.
+
+
+
 ## Plan of attack
 
 1. <a href="https://github.com/pharrisee/niflheim/releases">Download a release</a>
-2. move it to a folder of you chooising, preferably on the path
+2. move it to a folder of your chooising, preferably on the path
 3. run it, you'll get some help text
 
 ## init
