@@ -2,7 +2,7 @@
 
 Easy setup of a Valheim server (currently Ubuntu 20.04 specific).
 
-NAME:
+```NAME:
    niflheim - setup a dedicated Valheim server on linux
 
 USAGE:
@@ -23,6 +23,7 @@ COMMANDS:
 
 GLOBAL OPTIONS:
    --help, -h  show help (default: false)
+```
 
 ## Plan of attack
 
