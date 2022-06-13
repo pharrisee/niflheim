@@ -102,6 +102,10 @@ VALHEIM_SERVICE_NAME=valheim-username
 
 `niflheim service-status` will use the underlying `systemctl` and `service` commands to show the status of the service.
 
+## tail
+
+`niflheim tail` will tail the latest log from the logs folder.
+
 
 
 
