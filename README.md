@@ -55,20 +55,20 @@ VALHEIM_SERVICE_NAME=valheim-username
 The `niflheim depends` command will install all of the operating system dependencies to get Valheim running quickly:
 
 ```
-	sudo apt-get update
-	sudo apt-get install --no-install-recommends --no-install-suggests -y software-properties-common
-	sudo dpkg --add-architecture i386
-	sudo add-apt-repository multiverse
-	echo PURGE | sudo debconf-communicate steam
-	echo PURGE | sudo debconf-communicate steamcmd
-	echo steam steam/question select "I AGREE" | sudo debconf-set-selections
-	echo steam steam/license note '' | sudo debconf-set-selections
-	echo steam steam/purge note '' | sudo debconf-set-selections
-	sudo apt-get install --no-install-recommends --no-install-suggests -y steamcmd lib32gcc-s1 lib32stdc++6 libsdl2-2.0-0:i386 libsdl2-2.0-0
-	/usr/games/steamcmd +quit &> /dev/null
-	sudo apt-get full-upgrade -y --allow-downgrades
-	sudo apt-get autoremove -y
-	sudo apt-get autoclean -y
+sudo apt-get update
+sudo apt-get install --no-install-recommends --no-install-suggests -y software-properties-common
+sudo dpkg --add-architecture i386
+sudo add-apt-repository multiverse
+echo PURGE | sudo debconf-communicate steam
+echo PURGE | sudo debconf-communicate steamcmd
+echo steam steam/question select "I AGREE" | sudo debconf-set-selections
+echo steam steam/license note '' | sudo debconf-set-selections
+echo steam steam/purge note '' | sudo debconf-set-selections
+sudo apt-get install --no-install-recommends --no-install-suggests -y steamcmd lib32gcc-s1 lib32stdc++6 libsdl2-2.0-0:i386 libsdl2-2.0-0
+/usr/games/steamcmd +quit &> /dev/null
+sudo apt-get full-upgrade -y --allow-downgrades
+sudo apt-get autoremove -y
+sudo apt-get autoclean -y
 ```
 
 ## install
