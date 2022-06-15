@@ -68,7 +68,7 @@ Installs OS level packages using apt to ensure correct running of the Valheim se
 
 #### niflheim install
 
-Uses the steamcmd installed in the previous (depends) step to install the game.  Creates a start script called `niflheim_server.sh` in the game folder which uses the env file to correctly start the game server.
+Uses the steamcmd installed in the previous (depends) step to install the game in the folder in the env file, `valheim-server`.  Creates a start script called `niflheim_server.sh` in the game folder which uses the env file to correctly start the game server.
 
 Creates a `valheim-data` folder where game config (admin, whitelist etc),  saves and worlds are stored.
 
