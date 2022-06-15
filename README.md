@@ -76,7 +76,7 @@ Creates a `valheim-log` folder where timestamped log files are stored.
 
 #### niflheim service-install
 
-Installs a systemd unit file to allow the game server to run as an OS service.  You can manage the service (start, stop, restart and getstatus) using the niflheim commands listed in the help.
+Installs a systemd unit file to allow the game server to run as an OS service.  You can manage the service (start, stop, restart and status) using the niflheim commands listed in the help.
 
 #### niflheim tail
 
