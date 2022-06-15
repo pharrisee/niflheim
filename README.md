@@ -43,6 +43,47 @@ Currently `niflheim` will install dependencies, game server and service manageme
 2. move it to a folder of your choosing, preferably on the path.
 3. run `niflheim`, you'll get some help text to peruse.
 
+Once you have had a read of the help text, simply run these commands to get a properly installed game instance:
+
+#### niflheim init
+Initialize a $HOME/niflheim.env file, with the config for your new server:
+
+```
+VALHEIM_SERVER_FOLDER=/home/valheim/valheim-server
+VALHEIM_DATA_FOLDER=/home/valheim/valheim-data
+VALHEIM_LOGS_FOLDER=/home/valheim/valheim-logs
+VALHEIM_START_SCRIPT_NAME=niflheim-start.sh
+
+VALHEIM_SERVER_NAME="Private Valheim Server"
+VALHEIM_SERVER_PASSWORD="random_password_goes_here"
+VALHEIM_SERVER_PORT=2456
+VALHEIM_SERVER_WORLD="private-valheim-server"
+VALHEIM_SERVER_PUBLIC=1
+
+VALHEIM_SERVICE_NAME=valheim-valheim
+```
+#### niflheim depends
+
+Installs OS level packages using apt to ensure correct running of the Valheim server and steamcmd.
+
+#### niflheim install
+
+Uses the steamcmd installed in the previous (depends) step to install the game.  Creates a start script called `niflheim_server.sh` in the game folder which uses the env file to correctly start the game server.
+
+Creates a `valheim-data` folder where game config (admin, whitelist etc),  saves and worlds are stored.
+
+Creates a `valheim-log` folder where timestamped log files are stored.
+
+#### niflheim service-install
+
+Installs a systemd unit file to allow the game server to run as an OS service.  You can manage the service (start, stop, restart and getstatus) using the niflheim commands listed in the help.
+
+#### niflheim tail
+
+Shows the live log and follows (tails) the log.
+
+# Commands
+
 ## init
 
 The `niflheim init` command will initialise a `niflheim.env` file in the root of your current users folder.  Take a read of it, and edit it to suit your environment.
